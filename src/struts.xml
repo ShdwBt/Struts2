@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" /> <!-- conseillé de la fixer à false -->
+	<constant name="struts.custom.i18n.ressources" value="package" />
+	
+   	<package name="frontoffice" namespace="/" extends="struts-default">
+		<default-action-ref name="index" />
+		
+		<action name="gotoPage2">
+		      <result type="redirect" >/page2.jsp</result>
+		</action>
+		
+	</package>
+</struts>
